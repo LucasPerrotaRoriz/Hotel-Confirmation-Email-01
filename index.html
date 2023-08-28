@@ -168,40 +168,22 @@
 	        background: #555555 !important;
 	        border-color: #555555 !important;
 	    }
+      
 
 	    /* Media Queries */
-	    @media screen and (max-width: 480px) {
-
-	        /* What it does: Forces table cells into full-width rows. */
-	        .stack-column,
-	        .stack-column-center {
-	            display: block !important;
-	            width: 100% !important;
-	            max-width: 100% !important;
-	            direction: ltr !important;
-	        }
-	        /* And center justify these ones. */
-	        .stack-column-center {
-	            text-align: center !important;
-	        }
-
-	        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
-	        .center-on-narrow {
-	            text-align: center !important;
-	            display: block !important;
-	            margin-left: auto !important;
-	            margin-right: auto !important;
-	            float: none !important;
-	        }
-	        table.center-on-narrow {
-	            display: inline-block !important;
-	        }
-
+	    @media screen and (max-width: 420px) {
 	        /* What it does: Adjust typography on small screens to improve readability */
 	        .email-container p {
 	            font-size: 17px !important;
 	        }
+
+          .hero-image {
+           max-width: 320px !important;
+           padding: 0 !important;
+          }
 	    }
+
+
 
     </style>
     <!-- Progressive Enhancements : END -->
@@ -251,37 +233,49 @@
     <![endif]-->
     
       <!-- Email Body : BEGIN -->
-        <!-- Email Header : BEGIN -->
+        <!-- Email Hero : BEGIN -->
         <tr>
           <td>
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" >
               <tr>
-                <td style="padding-top: 20px; padding-left: 10px;">
-                  <img src="img/logo-room.png" alt="Company Logo" width="170" height="35" border="0" style="max-width: 170px; width: 100%; height: auto; 
-                  font-family: sans-serif; font-style: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; background: #d42f59; 
-                  color: #ffffff;">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- Email Header : END -->
+                <td style="background-image: url('img/2header-room.png'); background-size: cover !important; max-width: 600px" valign="top">
+                  <!--[if gto mso 9]>
+                  <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; width: 600px; height: auto;" src="https://via.placeholder.com/680x180/222222/666666" />
+                  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; position: absolute; width: 600px; height: auto;">
+                  <v:fill opacity="0%" color="#ffffff" />
+                  <![endif]-->
+                  <div>
+                    <!--[if mso]>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600">
+                    <tr>
+                    <td width="500">
+                    <![endif]-->
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left">
+                        <tr>
+                          <td style="padding-top: 20px; padding-left: 10px;">
+                            <img src="img/logo-room.png" alt="Company Logo" width="170" height="35" border="0" style="max-width: 170px; width: 100%; height: auto; 
+                            font-family: sans-serif; font-style: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; background: transparent; 
+                            color: #ffffff;">
+                          </td>
+                        </tr>
+                      </table>
 
-        <!-- Email Hero : BEGIN -->
-        <tr>
-          <td>
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-              <tr>
-                <td style="">
-                  <img src="img/Hero.png" alt="Image Enjoy your room reservation" width="600" height="auto" border="0" style="max-width: 600px; width: 100%; height: auto; background: #d42f59;
-                  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; color: #ffffff;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                          <td valign="middle" align="center">
+                            <img class="hero-image" src="img/txt_2.png" alt="Enjoy your room reservation" width="500" height="auto" border="0" style="max-width: 500px; width: 100%; height: auto; background: transparent;
+                            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; color: #ffffff; padding: 10px;">
+                          </td>
+                        </tr>
+                      </table>
+                  </div>
+                  
                 </td>
               </tr>
             </table>
           </td>
         </tr>
         <!-- Email Hero : END -->
-
       <!-- Email Body : END -->
 
     <!--[if mso]>
@@ -343,3 +337,7 @@
   </center>
 </body>
 </html>
+<!-- 
+  
+
+-->
