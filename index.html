@@ -169,8 +169,39 @@
 	        border-color: #555555 !important;
 	    }
       
+      
+      @media screen and (max-width: 480px) {
+        /* What it does: Forces table cells into full-width rows. */
+        .stack-column,
+        .stack-column-center {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            direction: ltr !important;
+        }
+        /* And center justify these ones. */
+        .stack-column-center {
+            text-align: center !important;
+        }
 
-	    /* Media Queries */
+        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+        .center-on-narrow {
+            text-align: center !important;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            float: none !important;
+        }
+        table.center-on-narrow {
+            display: inline-block !important;
+        }
+
+        /* What it does: Adjust typography on small screens to improve readability */
+        .email-container p {
+            font-size: 17px !important;
+        }
+      }
+
 	    @media screen and (max-width: 420px) {
 	        /* What it does: Adjust typography on small screens to improve readability */
 	        .email-container p {
@@ -225,7 +256,7 @@
   <td>
   <![endif]-->
   
-    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+    <div style="max-width: 640px; margin: 0 auto;" class="email-container">
     <!--[if mso]>
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600">
     <tr>
@@ -299,7 +330,7 @@
   <td>
   <![endif]-->
 
-    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;" class="email-container">
+    <div style="max-width: 640px; margin: 0 auto; background-color: #ffffff;" class="email-container">
     <!--[if mso]>
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600">
     <tr>
@@ -316,50 +347,51 @@
 
         <!-- Contact House Row : BEGIN -->
         <tr>
-          <td dir="ltr" height="100%" width="100%" valign="top" style="font-size: 0px; background-color: #ffffff;">
+          <td align="center" valign="top" style="font-size: 0px; background-color: #ffffff;">
             <!--[if mso]>
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="580" style="width: 580px">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" >
             <tr>
-            <td valign="top" width="180" style="width: 180px;">
+            <td valign="top" width="300" style="width: 300px">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; max-width: 180px; min-width: 120px; width: 100%;" class="stack-column">
+            <div style="display: inline-block; margin: 0 -1px; min-width: 80px; max-width: 160px; vertical-align: top; padding-top: 20px;" class="stack-column">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td align="center" dir="ltr" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
-                    <img src="img/contact.room.png" alt="Contact House Icon" width="55" height="auto" alt="Contact House Icon" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
-                    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; color: #333333;"
-                    class="center-on-narrow">
+                  <td align="center" style="height: 85px; margin: 0 auto;">
+                      <img src="img//contact.room.png" alt="Contact House Icon" width="55" height="auto" border="0" style="max-width: 55px; width: 100%; height: auto;
+                      background-color: #ffffff; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 15px; color: #333333;">
                   </td>
                 </tr>
               </table>
             </div>
             <!--[if mso]>
             </td>
-            <td valign="top" width="420" style="420">
+            <td valign="top" width="300">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; max-width: 420px; min-width: 280px;" class="stack-column">
+            <div style="display: inline-block; margin: 0 -1px; min-width: 220px; max-width: 480px; vertical-align: top;" class="stack-column">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td dir="ltr" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="center-on-narrow">
-                    <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; line-height: 30px; text-transform: uppercase;
-                    margin-bottom: 10px; color: #333333;">
-                      Contact House 
-                    </h2>
-                    <p style="margin: 0 0 10px 0;">
-                      London LOFT, Host Izzy / mobile +1(567) 543.765.88
-                    </p>
+                  <td>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                      <tr>
+                        <td align="left" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 30px;
+                        padding-top: 10px; padding-left: 20px; padding-bottom: 10px; padding-right: 10px">
+                          <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 18px; line-height: 30px; 
+                          text-transform: uppercase; color: #333333;" class="stack-column-center">
+                            Contact House
+                          </h2>
+                          <p style="margin: 0 0 10px 0;" class="stack-column-center">
+                            London LOFT, Host Izzy / mobile +1(567) 543.765.88
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
             </div>
-            <!--[if mso]>
-            </td>
-            </tr>
-            </table>
-            <![endif]-->
           </td>
         </tr>
-        <!-- Contact House Row : BEGIN -->
+        <!-- Contact House Row : END -->
 
         <!-- Spacer + Line + Space : BEGIN -->
         <tr>
@@ -383,39 +415,44 @@
 
         <!-- Address Row : BEGIN -->
         <tr>
-          <td dir="ltr" height="100%" width="100%" valign="top" style="font-size: 0px; background-color: #ffffff;">
+          <td align="center" valign="top" style="font-size: 0px; background-color: #ffffff;">
             <!--[if mso]>
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" width="580" style="width: 580px">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" >
             <tr>
-            <td valign="top" width="180" style="width: 180px;">
+            <td valign="top" width="300" style="width: 300px">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; max-width: 180px; min-width: 120px; width: 100%" class="stack-column">
+            <div style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 80px; max-width: 160px; vertical-align: top; padding-top: 20px;" class="stack-column">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td align="center" dir="ltr" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
-                    <img src="img/address.room.png" width="55" alt="Address Room Icon" height="auto" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
-                    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; color: #555555;"
-                    class="center-on-narrow">
+                  <td align="center" style="height: 85px; margin: 0 auto;">
+                      <img src="img//address.room.png" alt="Contact House Icon" width="55" height="auto" border="0" style="max-width: 55px; width: 100%; height: auto;
+                      background-color: #ffffff; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 15px; color: #333333;">
                   </td>
                 </tr>
               </table>
             </div>
             <!--[if mso]>
             </td>
-            <td valign="top" width="400" style="width: 400px;">
+            <td valign="top" width="300">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; max-width: 420px; min-width: 280px;" class="stack-column">
+            <div style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 220px; max-width: 480px; vertical-align: top;" class="stack-column">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td dir="ltr" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;"
-                  class="center-on-narrow">  
-                    <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; line-height: 30px; text-transform: uppercase;
-                    color: #333333;">
-                      Address
-                    </h2>
-                    <p style="margin: 0 0 10px 0;">
-                      Bankside, London SE1 9TG, UK
-                    </p>
+                  <td>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                      <tr>
+                        <td align="left" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 30px;
+                        padding-top: 10px; padding-left: 20px; padding-bottom: 10px; padding-right: 10px">
+                          <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 18px; line-height: 30px; 
+                          text-transform: uppercase; color: #333333;" class="stack-column-center">
+                            Address
+                          </h2>
+                          <p style="margin: 0 0 10px 0;" class="stack-column-center">
+                            Bankside, London SE1 9TG, UK
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
@@ -448,46 +485,44 @@
         <tr>
           <td align="center" valign="top" style="font-size: 0px; background-color: #ffffff;">
             <!--[if mso]>
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600"> 
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640">
             <tr>
-            <td valign="top" width="300" style="width: 300px;">
+            <td valign="top" width="300" style="300px">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; width: 100%; max-width: 300px; min-width: 200px; vertical-align: top;" class="stack-column">
+            <div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:320px; vertical-align:top;" class="stack-column">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 15px; text-align: left;">
-                      <tr>
-                        <td align="center" dir="ltr" height="100%" width="100%" valign="top" style="font-size: 0px; background-color: #ffffff;">
-                          <!--[if mso]>
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" width="300px" style="width: 300px">
-                          <tr>
-                          <td valign="top" width="80" style="width: 80px">
-                          <![endif]-->
-                          <div style="display: inline-block; margin: 0 -1px; max-width: 60px; min-width: 60px; vertical-align: top; width: 100%" class="stack-column">
-                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                              <tr>
-                                <td align="center" dir="ltr" style="padding-top: 20px;">
-                                  <img src="img/address.room.png" width="55" alt="Address Room Icon" height="auto" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
-                                  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; color: #555555;"
-                                  class="center-on-narrow">
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
-                          <!--[if mso]>
+                  <td align="center" valign="top" style="font-size: 0px; background-color: #ffffff;">
+                    <!--[if mso]>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="150px">
+                    <tr>
+                    <td valign="top" width="150" style="width: 150px;">
+                    <![endif]-->
+                    <div style="display: inline-block; margin: 0 -1px; min-width: 160px; max-width: 160px; width: 100%; vertical-align: top;" class="stack-column">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" align="left">
+                        <tr>
+                          <td align="center" style="padding-top: 20px; padding-bottom: 20px;">
+                            <img src="img/check-in.room.png" alt="Check In Icon" width="55" height="auto" border="0" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
+                            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 15px; color: #333333;" class="center-on-narrow">
                           </td>
-                          <td valign="top" width="220" style="width: 220px;">
-                          <![endif]-->
-
-                          <div style="display: inline-block; margin: 0 -1px; max-width: 120px; min-width: 80px; margin-left: 20px;" class="stack-column">
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso]>
+                    </td>
+                    <td valign="top" width="150" style="width: 150px">
+                    <![endif]-->
+                    <div style="display: inline-block; margin: 0 -1px; min-width: 160px; max-width: 160px; width: 100%; vertical-align: top;" class="stack-column">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                          <td>
                             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                               <tr>
-                                <td dir="ltr" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;"
-                                class="center-on-narrow">  
-                                  <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 30px; text-transform: uppercase;
-                                  color: #333333;">
-                                    Check-in
+                                <td align="left" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 30px;
+                                padding-top: 10px;  padding-bottom: 10px; " class="stack-column-center">
+                                  <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 18px; line-height: 30px; 
+                                  text-transform: uppercase; color: #333333;">
+                                    Check-In
                                   </h2>
                                   <p style="margin: 0 0 10px 0;">
                                     15:00
@@ -495,59 +530,57 @@
                                 </td>
                               </tr>
                             </table>
-                          </div>
-                          <!--[if mso]>
                           </td>
-                          </tr>
-                          </table>
-                          <![endif]-->
-                        </td>
-                      </tr>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso]>
+                    </td>
+                    </tr>
                     </table>
+                    <![endif]-->
                   </td>
                 </tr>
               </table>
             </div>
             <!--[if mso]>
             </td>
-            <td valign="top" width="300" style="width: 300px">
+            <td valign="top" width="300" style="300px">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; width: 100%; max-width: 300px; min-width: 200px; vertical-align: top;" class="stack-column">
+            <div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:320px; vertical-align:top;" class="stack-column">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 15px; text-align: left;">
-                      <tr>
-                        <td align="center" dir="ltr" height="100%" width="100%" valign="top" style="font-size: 0px; background-color: #ffffff;">
-                          <!--[if mso]>
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" width="300px" style="width: 300px">
-                          <tr>
-                          <td valign="top" width="80" style="width: 80px">
-                          <![endif]-->
-                          <div style="display: inline-block; margin: 0 -1px; max-width: 60px; min-width: 60px; vertical-align: top; width: 100%" class="stack-column">
-                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                              <tr>
-                                <td align="center" dir="ltr" style="padding-top: 20px;">
-                                  <img src="img/address.room.png" width="55" alt="Address Room Icon" height="auto" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
-                                  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; color: #555555;"
-                                  class="center-on-narrow">
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
-                          <!--[if mso]>
+                  <td align="center" valign="top" style="font-size: 0px; background-color: #ffffff;">
+                    <!--[if mso]>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="150px">
+                    <tr>
+                    <td valign="top" width="150" style="width: 150px;">
+                    <![endif]-->
+                    <div style="display: inline-block; margin: 0 -1px; min-width: 160px; max-width: 160px; width: 100%; vertical-align: top;" class="stack-column">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                          <td align="center" style="padding-top: 20px; padding-bottom: 20px;">
+                            <img src="img/check-in.room.png" alt="Check In Icon" width="55" height="auto" border="0" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
+                            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 15px; color: #333333;" class="center-on-narrow">
                           </td>
-                          <td valign="top" width="220" style="width: 220px;">
-                          <![endif]-->
-
-                          <div style="display: inline-block; margin: 0 -1px; max-width: 120px; min-width: 80px; margin-left: 20px;" class="stack-column">
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso]>
+                    </td>
+                    <td valign="top" width="150" style="width: 150px">
+                    <![endif]-->
+                    <div style="display: inline-block; margin: 0 -1px; min-width: 160px; max-width: 160px; width: 100%; vertical-align: top;" class="stack-column">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                          <td>
                             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                               <tr>
-                                <td dir="ltr" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;" 
-                                class="center-on-narrow">  
-                                  <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 30px; text-transform: uppercase;
-                                  color: #333333;">
-                                    Check-out
+                                <td align="left" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 30px;
+                                padding-top: 10px; padding-bottom: 10px;" class="stack-column-center">
+                                  <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 18px; line-height: 30px; 
+                                  text-transform: uppercase; color: #333333;">
+                                    Check-Out
                                   </h2>
                                   <p style="margin: 0 0 10px 0;">
                                     11:00
@@ -555,15 +588,15 @@
                                 </td>
                               </tr>
                             </table>
-                          </div>
-                          <!--[if mso]>
                           </td>
-                          </tr>
-                          </table>
-                          <![endif]-->
-                        </td>
-                      </tr>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso]>
+                    </td>
+                    </tr>
                     </table>
+                    <![endif]-->
                   </td>
                 </tr>
               </table>
@@ -600,113 +633,77 @@
         <tr>
           <td align="center" valign="top" style="font-size: 0px; background-color: #ffffff;">
             <!--[if mso]>
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600"> 
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640">
             <tr>
-            <td valign="top" width="300" style="width: 300px;">
+            <td valign="top" width="300" style="300px">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; width: 100%; max-width: 300px; min-width: 200px; vertical-align: top;" class="stack-column">
+            <div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:320px; vertical-align:top;" class="stack-column">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 15px; text-align: left;">
-                      <tr>
-                        <td align="center" dir="ltr" height="100%" width="100%" valign="top" style="font-size: 0px; background-color: #ffffff;">
-                          <!--[if mso]>
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" width="300px" style="width: 300px">
-                          <tr>
-                          <td valign="top" width="80" style="width: 80px">
-                          <![endif]-->
-                          <div style="display: inline-block; margin: 0 -1px; max-width: 60px; min-width: 60px; vertical-align: top; width: 100%" class="stack-column">
-                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                              <tr>
-                                <td align="center" dir="ltr" style="padding-top: 20px;">
-                                  <img src="img/amount.room.png" width="55" alt="Address Room Icon" height="auto" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
-                                  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 15px; color: #555555;"
-                                  class="center-ona-narrow">
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
-                          <!--[if mso]>
+                  <td align="center" valign="top" style="font-size: 0px; background-color: #ffffff;">
+                    <!--[if mso]>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="150px">
+                    <tr>
+                    <td valign="top" width="150" style="width: 150px;">
+                    <![endif]-->
+                    <div style="display: inline-block; margin: 0 -1px; min-width: 160px; max-width: 160px; width: 100%; vertical-align: top;" class="stack-column">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" align="left">
+                        <tr>
+                          <td align="center" style="padding-top: 20px; padding-bottom: 20px;">
+                            <img src="img/check-in.room.png" alt="Check In Icon" width="55" height="auto" border="0" style="max-width: 55px; width: 100%; height: auto; background-color: #ffffff;
+                            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 15px; color: #333333;" class="center-on-narrow">
                           </td>
-                          <td valign="top" width="220" style="width: 220px;">
-                          <![endif]-->
-
-                          <div style="display: inline-block; margin: 0 -1px; max-width: 120px; min-width: 80px; margin-left: 20px;" class="stack-column">
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso]>
+                    </td>
+                    <td valign="top" width="150" style="width: 150px">
+                    <![endif]-->
+                    <div style="display: inline-block; margin: 0 -1px; min-width: 160px; max-width: 160px; width: 100%; vertical-align: top;" class="stack-column">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                          <td>
                             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                               <tr>
-                                <td dir="ltr" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;"
-                                class="center-on-narrow">  
-                                  <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 30px; text-transform: uppercase;
-                                  color: #333333;">
+                                <td align="left" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 15px; line-height: 30px;
+                                padding-top: 10px;  padding-bottom: 10px; " class="stack-column-center">
+                                  <h2 style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 18px; line-height: 30px; 
+                                  text-transform: uppercase; color: #333333;">
                                     Amount
                                   </h2>
                                   <p style="margin: 0 0 10px 0;">
-                                    100€ x 5 day =
-                                  </p>
-                                  <p style="margin: 0 0 10px 0; font-weight: bold;">
-                                    500€
+                                    100€ x 5 day = <br />
+                                    <span style="font-weight: bold;">500€</span>
                                   </p>
                                 </td>
                               </tr>
                             </table>
-                          </div>
-                          <!--[if mso]>
                           </td>
-                          </tr>
-                          </table>
-                          <![endif]-->
-                        </td>
-                      </tr>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if mso]>
+                    </td>
+                    </tr>
                     </table>
+                    <![endif]-->
                   </td>
                 </tr>
               </table>
             </div>
             <!--[if mso]>
             </td>
-            <td valign="top" width="300" style="width: 300px">
+            <td valign="top" width="300" style="300px">
             <![endif]-->
-            <div style="display: inline-block; margin: 0 -1px; width: 100%; max-width: 300px; min-width: 200px; vertical-align: baseline;" class="stack-column">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:320px; vertical-align:top;" class="stack-column">
+              <table align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: auto;">
                 <tr>
-                  <td>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 15px; text-align: left;">
-                      <tr>
-                        <td align="center" dir="ltr" height="100%" width="100%" valign="top" style="font-size: 0px; background-color: #ffffff;">
-                          <!--[if mso]>
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" width="300px" style="width: 300px">
-                          <tr>
-                          <td valign="top" width="150" style="width: 150px">
-                          <![endif]-->
-
-                          <tr>
-                            <td height="35" aria-hidden="true" style="font-size: 0px; line-height: 0px">  
-                              &nbsp;
-                            </td>
-                          </tr>
-                          
-                          <!-- Button : BEGUIN-->
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                              <td style="border-radius: 4px; background-color: #ffffff;">
-                                <a href="#" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 20px; padding-top: 15px; 
-                                padding-right: 20px; padding-bottom: 15px; padding-left: 20px; border: 2px solid #d42f59; background-color: #ffffff; color: #d42f59;
-                                ">
-                                  View Receipt
-                                </a>
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- Button : END-->
-                          <!--[if mso]>
-                          </td>
-                          </tr>
-                          </table>
-                          <![endif]-->
-                        </td>
-                      </tr>
-                    </table>
+                  <td align="center" style="padding-top: 30px; padding-bottom: 30px;">
+                    <a href="#" style="font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 18px; line-height: 30px; background-color: #ffffff;
+                    border: 1px solid #d42f59; color: #d42f59; padding-top: 15px; padding-bottom: 15px; padding-right: 20px; padding-left: 20px;">
+                      View Receipts
+                    </a>
                   </td>
                 </tr>
               </table>
